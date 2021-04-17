@@ -10,6 +10,7 @@ import com.path_studio.moviecatalogue.R
 import com.path_studio.moviecatalogue.data.MovieEntity
 import com.path_studio.moviecatalogue.databinding.ItemsMovieBinding
 import com.path_studio.moviecatalogue.ui.detailMovie.DetailMovieActivity
+import com.path_studio.moviecatalogue.util.Utils
 
 class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
@@ -38,7 +39,7 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
         fun bind(movie: MovieEntity) {
             with(binding) {
                 tvItemTitle.text = movie.title
-                tvItemDate.text = movie.releaseDate
+                tvItemDate.text = Utils.changeStringToDateFormat(movie.releaseDate)
 
                 tvItemRating.rating = movie.rating.toFloat()/20
 

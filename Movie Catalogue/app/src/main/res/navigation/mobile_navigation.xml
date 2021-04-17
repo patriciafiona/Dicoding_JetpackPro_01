@@ -13,5 +13,5 @@
         android:id="@+id/navigation_tvShow"
         android:name="com.path_studio.moviecatalogue.ui.tvShow.TVShowFragment"
         android:label="fragment_list_user"
-        tools:layout="@layout/fragment_t_v_show" />
+        tools:layout="@layout/fragment_tv_show" />
 </navigation>

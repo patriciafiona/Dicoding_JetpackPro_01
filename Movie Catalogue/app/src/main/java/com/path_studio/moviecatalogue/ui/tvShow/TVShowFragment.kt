@@ -1,7 +1,6 @@
 package com.path_studio.moviecatalogue.ui.tvShow
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +24,7 @@ class TVShowFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
     ): View? {
         (activity as MainActivity).setOnBottomSheetCallbacks(this)
 
-        val view = inflater.inflate(R.layout.fragment_t_v_show, container, false)
+        val view = inflater.inflate(R.layout.fragment_tv_show, container, false)
 
         //init
         textResult = view.findViewById(R.id.textResult2)

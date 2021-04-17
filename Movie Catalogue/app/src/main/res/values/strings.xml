@@ -14,4 +14,14 @@
     <string name="results">Results</string>
     <string name="temp_title">Title here...</string>
     <string name="temp_date">12/12/12</string>
+    <string name="movie_backdrop">Movie Backdrop</string>
+    <string name="button_back">Button Back</string>
+    <string name="movie_poster">Movie Poster</string>
+    <string name="icon_dot">Icon Dot</string>
+    <string name="temp_duration">1h 20m</string>
+    <string name="titlebar">titleBar</string>
+    <string name="information">Information</string>
+    <string name="button_favorite">Button Favorite</string>
+    <string name="sinopsis">Sinopsis</string>
+    <string name="temp_sinopsis">Sinopsis will show here...</string>
 </resources>
