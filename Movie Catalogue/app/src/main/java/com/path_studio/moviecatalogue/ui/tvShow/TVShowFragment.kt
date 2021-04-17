@@ -39,7 +39,7 @@ class TVShowFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
 
         //default, show half layout
         (activity as MainActivity).closeBottomSheet()
-        
+
         textResult.setOnClickListener {
             (activity as MainActivity).openBottomSheet()
         }

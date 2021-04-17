@@ -6,30 +6,32 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.path_studio.moviecatalogue.R
+import com.path_studio.moviecatalogue.databinding.FragmentMovieBinding
 import com.path_studio.moviecatalogue.ui.MainActivity
 import com.path_studio.moviecatalogue.ui.bottomSheet.OnBottomSheetCallbacks
 
 class MovieFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
 
+    private var _binding: FragmentMovieBinding? = null
+    private val binding get() = _binding as FragmentMovieBinding
     private var currentState: Int = BottomSheetBehavior.STATE_HALF_EXPANDED
-    private lateinit var textResult: AppCompatTextView
-    private lateinit var filterImage: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        //set binding
+        _binding = FragmentMovieBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        //set bottomSheet Callbacks
         (activity as MainActivity).setOnBottomSheetCallbacks(this)
-
-        val view = inflater.inflate(R.layout.fragment_movie, container, false)
-
-        //init
-        textResult = view.findViewById(R.id.textResult)
-        filterImage = view.findViewById(R.id.filterImage)
-
         return view
     }
 
@@ -39,11 +41,25 @@ class MovieFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
         //default, show half layout
         (activity as MainActivity).closeBottomSheet()
 
-        textResult.setOnClickListener {
+        if (activity != null) {
+            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[MovieViewModel::class.java]
+            val movies = viewModel.getMovies()
+
+            val movieAdapter = MovieAdapter()
+            movieAdapter.setMovies(movies)
+
+            with(binding.rvMovie) {
+                layoutManager = LinearLayoutManager(context)
+                setHasFixedSize(true)
+                adapter = movieAdapter
+            }
+        }
+
+        binding.textResult.setOnClickListener {
             (activity as MainActivity).openBottomSheet()
         }
 
-        filterImage.setOnClickListener {
+        binding.indicatorImage.setOnClickListener {
             if (currentState == BottomSheetBehavior.STATE_EXPANDED) {
                 (activity as MainActivity).closeBottomSheet()
             } else if (currentState == BottomSheetBehavior.STATE_HALF_EXPANDED){
@@ -56,12 +72,12 @@ class MovieFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
         currentState = newState
         when (newState) {
             BottomSheetBehavior.STATE_EXPANDED -> {
-                textResult.text = this.getString(R.string.results)
-                filterImage.setImageResource(R.drawable.ic_baseline_expand_more_purple)
+                binding.textResult.text = this.getString(R.string.results)
+                binding.indicatorImage.setImageResource(R.drawable.ic_baseline_expand_more_purple)
             }
             BottomSheetBehavior.STATE_HALF_EXPANDED -> {
-                textResult.text = this.getString(R.string.list_of_movies)
-                filterImage.setImageResource(R.drawable.ic_baseline_expand_less_purple)
+                binding.textResult.text = this.getString(R.string.list_of_movies)
+                binding.indicatorImage.setImageResource(R.drawable.ic_baseline_expand_less_purple)
             }
         }
     }

@@ -12,4 +12,6 @@
     <string name="list_of_movies">List of Movies</string>
     <string name="list_of_tv_shows">List of TV Shows</string>
     <string name="results">Results</string>
+    <string name="temp_title">Title here...</string>
+    <string name="temp_date">12/12/12</string>
 </resources>
