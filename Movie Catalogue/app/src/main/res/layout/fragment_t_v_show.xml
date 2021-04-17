@@ -21,17 +21,17 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textResult"
+            android:id="@+id/textResult2"
             android:layout_marginStart="15dp"
             android:layout_gravity="center|start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/list_of_movies"
+            android:text="@string/list_of_tv_shows"
             android:textColor="#2B2B2B"
             android:textSize="20sp" />
 
         <ImageButton
-            android:id="@+id/filterImage"
+            android:id="@+id/filterImage2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"

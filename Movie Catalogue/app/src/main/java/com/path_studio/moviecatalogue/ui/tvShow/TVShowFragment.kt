@@ -1,6 +1,7 @@
-package com.path_studio.moviecatalogue.ui.movie
+package com.path_studio.moviecatalogue.ui.tvShow
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,7 @@ import com.path_studio.moviecatalogue.R
 import com.path_studio.moviecatalogue.ui.MainActivity
 import com.path_studio.moviecatalogue.ui.bottomSheet.OnBottomSheetCallbacks
 
-class MovieFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
+class TVShowFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
 
     private var currentState: Int = BottomSheetBehavior.STATE_HALF_EXPANDED
     private lateinit var textResult: AppCompatTextView
@@ -24,11 +25,11 @@ class MovieFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
     ): View? {
         (activity as MainActivity).setOnBottomSheetCallbacks(this)
 
-        val view = inflater.inflate(R.layout.fragment_movie, container, false)
+        val view = inflater.inflate(R.layout.fragment_t_v_show, container, false)
 
         //init
-        textResult = view.findViewById(R.id.textResult)
-        filterImage = view.findViewById(R.id.filterImage)
+        textResult = view.findViewById(R.id.textResult2)
+        filterImage = view.findViewById(R.id.filterImage2)
 
         return view
     }
@@ -38,7 +39,7 @@ class MovieFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
 
         //default, show half layout
         (activity as MainActivity).closeBottomSheet()
-
+        
         textResult.setOnClickListener {
             (activity as MainActivity).openBottomSheet()
         }
@@ -60,7 +61,7 @@ class MovieFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
                 filterImage.setImageResource(R.drawable.ic_baseline_expand_more_purple)
             }
             BottomSheetBehavior.STATE_HALF_EXPANDED -> {
-                textResult.text = this.getString(R.string.list_of_movies)
+                textResult.text = this.getString(R.string.list_of_tv_shows)
                 filterImage.setImageResource(R.drawable.ic_baseline_expand_less_purple)
             }
         }

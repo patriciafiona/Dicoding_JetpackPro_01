@@ -3,4 +3,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="app_logo">App_Logo</string>
+    <string name="home_banner">Home_banner</string>
+    <string name="show_indicator">Show_indicator</string>
+    <string name="welcome">Welcome.</string>
+    <string name="welcome_details">Millions of movies, TV shows and people to discover. Explore now.</string>
+    <string name="movie">Movie</string>
+    <string name="tv_show">TV Show</string>
+    <string name="list_of_movies">List of Movies</string>
+    <string name="list_of_tv_shows">List of TV Shows</string>
+    <string name="results">Results</string>
 </resources>
