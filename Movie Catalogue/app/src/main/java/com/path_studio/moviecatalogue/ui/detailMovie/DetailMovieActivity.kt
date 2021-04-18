@@ -1,22 +1,28 @@
 package com.path_studio.moviecatalogue.ui.detailMovie
 
+import android.annotation.SuppressLint
 import android.app.ActionBar
 import android.os.Bundle
+import android.view.View
+import android.webkit.*
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.faltenreich.skeletonlayout.Skeleton
 import com.path_studio.moviecatalogue.R
 import com.path_studio.moviecatalogue.data.MovieEntity
 import com.path_studio.moviecatalogue.databinding.ActivityDetailMovieBinding
 import com.path_studio.moviecatalogue.util.Utils.changeStringToDateFormat
-import java.util.*
+import com.path_studio.moviecatalogue.util.Utils.showAlert
 
-class DetailMovieActivity : AppCompatActivity() {
+
+class DetailMovieActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityDetailMovieBinding
+    private lateinit var skeleton: Skeleton
 
     companion object {
         const val EXTRA_MOVIE = "extra_movie"
@@ -27,6 +33,13 @@ class DetailMovieActivity : AppCompatActivity() {
         binding = ActivityDetailMovieBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //init Skeleton
+        skeleton = binding.skeletonLayout
+
+        //show loading indicator
+        showLoading(true)
+        showYoutubeLoading(true)
+
         val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailMovieViewModel::class.java]
 
         val extras = intent.extras
@@ -35,7 +48,7 @@ class DetailMovieActivity : AppCompatActivity() {
             if (movieId != 0L) {
                 viewModel.setSelectedMovie(movieId)
                 val movieDetails = viewModel.getMovies()
-                showDetailMovie(viewModel.getMovies() as MovieEntity)
+                showDetailMovie(movieDetails)
             }
         }
 
@@ -44,42 +57,102 @@ class DetailMovieActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private fun showDetailMovie(movieEntity: MovieEntity) {
-        binding.movieTopTitle.text = movieEntity.title
-        binding.movieTitle.text = movieEntity.title
-        binding.movieSinopsis.text = movieEntity.description
+        if (movieEntity.title.isNotEmpty()){
+            showLoading(false)
 
-        binding.movieReleaseDate.text = changeStringToDateFormat(movieEntity.releaseDate)
+            binding.movieTopTitle.text = movieEntity.title
+            binding.movieTitle.text = movieEntity.title
+            binding.movieSinopsis.text = movieEntity.description
 
-        binding.movieRating.rating = movieEntity.rating.toFloat()/20
+            binding.movieReleaseDate.text = changeStringToDateFormat(movieEntity.releaseDate)
 
-        Glide.with(this)
+            binding.movieRating.rating = movieEntity.rating.toFloat()/20
+
+            Glide.with(this)
                 .load(movieEntity.posterURL)
                 .transform(RoundedCorners(20))
                 .apply(
-                        RequestOptions.placeholderOf(R.drawable.ic_loading)
-                                .error(R.drawable.ic_error))
+                    RequestOptions.placeholderOf(R.drawable.ic_loading)
+                        .error(R.drawable.ic_error)
+                )
                 .into(binding.moviePoster)
 
-        Glide.with(this)
+            Glide.with(this)
                 .load(movieEntity.backdropURL)
                 .transform(RoundedCorners(20))
                 .apply(
-                        RequestOptions.placeholderOf(R.drawable.ic_loading)
-                                .error(R.drawable.ic_error))
+                    RequestOptions.placeholderOf(R.drawable.ic_loading)
+                        .error(R.drawable.ic_error)
+                )
                 .into(binding.movieBackdrop)
-        binding.movieBackdrop.alpha = 0.5F
+            binding.movieBackdrop.alpha = 0.5F
 
-        for (genre in movieEntity.genre){
-            //set the properties for button
+            for (genre in movieEntity.genre){
+                //set the properties for button
+                val btnTag = Button(this)
 
-            //set the properties for button
-            val btnTag = Button(this)
-            btnTag.layoutParams = ActionBar.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT)
-            btnTag.text = genre
+                //set margin and create button
+                val params: ActionBar.LayoutParams = ActionBar.LayoutParams(
+                    ActionBar.LayoutParams.WRAP_CONTENT,
+                    ActionBar.LayoutParams.WRAP_CONTENT
+                )
+                params.setMargins(0, 0, 20, 0)
 
-            //add button to the layout
-            binding.movieGenres.addView(btnTag);
+                btnTag.layoutParams = ActionBar.LayoutParams(params)
+                btnTag.text = genre
+                btnTag.background = this.getDrawable(R.drawable.rounded_button)
+
+                //set padding
+                btnTag.setPadding(15, 10, 15, 10)
+
+                //add button to the layout
+                binding.movieGenres.addView(btnTag)
+            }
+
+            //set video in webview
+            setVideoWebView(movieEntity.youtubeVideoURL)
+        }
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    private fun setVideoWebView(youtubeURL: String){
+        binding.movieTrailer.webViewClient = object : WebViewClient() {
+            override fun onPageFinished(view: WebView, url: String) {
+                showYoutubeLoading(false)
+            }
+
+            override fun onReceivedError(
+                view: WebView?,
+                request: WebResourceRequest?,
+                error: WebResourceError?
+            ) {
+                showAlert(this@DetailMovieActivity, "Failed to get Trailer Video")
+            }
+
+            override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
+                return false
+            }
+        }
+        val webSettings: WebSettings = binding.movieTrailer.settings
+        webSettings.javaScriptEnabled = true
+        binding.movieTrailer.loadUrl(youtubeURL)
+    }
+
+    private fun showLoading(state: Boolean) {
+        if (state) {
+            skeleton.showSkeleton()
+        } else {
+            skeleton.showOriginal()
+        }
+    }
+
+    private fun showYoutubeLoading(state: Boolean) {
+        if (state) {
+            binding.youtubeProgressBar.visibility = View.VISIBLE
+        } else {
+            binding.youtubeProgressBar.visibility = View.GONE
         }
     }
 }

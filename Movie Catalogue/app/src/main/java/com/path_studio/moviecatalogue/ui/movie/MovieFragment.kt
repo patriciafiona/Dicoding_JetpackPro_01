@@ -4,15 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.path_studio.moviecatalogue.R
 import com.path_studio.moviecatalogue.databinding.FragmentMovieBinding
-import com.path_studio.moviecatalogue.ui.MainActivity
+import com.path_studio.moviecatalogue.ui.mainPage.MainActivity
 import com.path_studio.moviecatalogue.ui.bottomSheet.OnBottomSheetCallbacks
 
 class MovieFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {

@@ -10,5 +10,5 @@ data class MovieEntity (
     var rating: Double,
     var backdropURL: String,
     var posterURL: String,
-    var trailerURL: String
+    var youtubeVideoURL: String
 )

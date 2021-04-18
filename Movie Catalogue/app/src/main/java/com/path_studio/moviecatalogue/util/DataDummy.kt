@@ -20,7 +20,7 @@ object DataDummy {
                 83.0,
                 "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/inJjDhCjfhh3RtrJWBmmDqeuSYC.jpg",
                 "https://www.themoviedb.org/t/p/w220_and_h330_face/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
-                "https://www.themoviedb.org/video/play?key=odM92ap8_c0"
+                "https://www.youtube.com/watch?v=odM92ap8_c0"
             )
         )
 
@@ -36,7 +36,7 @@ object DataDummy {
                 85.0,
                 "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/pcDc2WJAYGJTTvRSEIpRZwM3Ola.jpg",
                 "https://www.themoviedb.org/t/p/w220_and_h330_face/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
-                "https://www.themoviedb.org/video/play?key=vM-Bja2Gy04"
+                "https://www.youtube.com/watch?v=vM-Bja2Gy04"
             )
         )
 
@@ -53,7 +53,7 @@ object DataDummy {
                 83.0,
                 "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/7prYzufdIOy1KCTZKVWpjBFqqNr.jpg",
                 "https://www.themoviedb.org/t/p/w220_and_h330_face/lPsD10PP4rgUGiGR4CCXA6iY0QQ.jpg",
-                "https://www.themoviedb.org/video/play?key=9BPMTr-NS9s"
+                "https://www.youtube.com/watch?v=9BPMTr-NS9s"
             )
         )
 
@@ -86,7 +86,7 @@ object DataDummy {
                 68.0,
                 "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/srYya1ZlI97Au4jUYAktDe3avyA.jpg",
                 "https://www.themoviedb.org/t/p/w220_and_h330_face/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
-                "https://www.themoviedb.org/video/play?key=sfM7_JLk-84"
+                "https://www.youtube.com/watch?v=sfM7_JLk-84"
             )
         )
 
@@ -102,7 +102,7 @@ object DataDummy {
                 64.0,
                 "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/6TPZSJ06OEXeelx1U1VIAt0j9Ry.jpg",
                 "https://www.themoviedb.org/t/p/w220_and_h330_face/dWSnsAGTfc8U27bWsy2RfwZs0Bs.jpg",
-                "https://www.themoviedb.org/video/play?key=UCLz92vUYJY"
+                "https://www.youtube.com/watch?v=UCLz92vUYJY"
             )
         )
 
@@ -121,7 +121,7 @@ object DataDummy {
                 59.0,
                 "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/zDq2pwPyt4xwSFHKUoNN2LohDWj.jpg",
                 "https://www.themoviedb.org/t/p/w220_and_h330_face/b4gYVcl8pParX8AjkN90iQrWrWO.jpg",
-                "https://www.themoviedb.org/video/play?key=NmQiJPLYzPI"
+                "https://www.youtube.com/watch?v=NmQiJPLYzPI"
             )
         )
 
@@ -137,7 +137,7 @@ object DataDummy {
                 58.0,
                 "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/nvghkcf0NQno5OanZXlBhqv2cOL.jpg",
                 "https://www.themoviedb.org/t/p/w220_and_h330_face/279yOM4OQREL36B3SECnRxoB4MZ.jpg",
-                "https://www.themoviedb.org/video/play?key=qnx6-YLXFwg"
+                "https://www.youtube.com/watch?v=qnx6-YLXFwg"
             )
         )
 
@@ -156,7 +156,7 @@ object DataDummy {
                 83.0,
                 "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/kf456ZqeC45XTvo6W9pW5clYKfQ.jpg",
                 "https://www.themoviedb.org/t/p/w220_and_h330_face/hm58Jw4Lw8OIeECIq5qyPYhAeRJ.jpg",
-                "https://www.themoviedb.org/video/play?key=4TojlZYqPUo"
+                "https://www.youtube.com/watch?v=4TojlZYqPUo"
             )
         )
 
@@ -173,7 +173,7 @@ object DataDummy {
                 71.0,
                 "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jiqD14fg7UTZOT6qgvzTmfRYpWI.jpg",
                 "https://www.themoviedb.org/t/p/w220_and_h330_face/h4VB6m0RwcicVEZvzftYZyKXs6K.jpg",
-                "https://www.themoviedb.org/video/play?key=ptLZlrE8MrQ"
+                "https://www.youtube.com/watch?v=ptLZlrE8MrQ"
             )
         )
 
@@ -188,7 +188,7 @@ object DataDummy {
                 57.0,
                 "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/54yOImQgj8i85u9hxxnaIQBRUuo.jpg",
                 "https://www.themoviedb.org/t/p/w220_and_h330_face/qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg",
-                "https://www.themoviedb.org/video/play?key=ozUuAcGOhPs"
+                "https://www.youtube.com/watch?v=ozUuAcGOhPs"
             )
         )
 
@@ -204,7 +204,7 @@ object DataDummy {
                 82.0,
                 "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/f5F4cRhQdUbyVbB5lTNCwUzD6BP.jpg",
                 "https://www.themoviedb.org/t/p/w220_and_h330_face/mZuAPY4ETMQPHhCXIcJ90kd6RaS.jpg",
-                "https://www.themoviedb.org/video/play?key=t433PEQGErc"
+                "https://www.youtube.com/watch?v=t433PEQGErc"
             )
         )
 

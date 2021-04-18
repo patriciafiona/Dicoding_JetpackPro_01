@@ -9,7 +9,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.path_studio.moviecatalogue.R
-import com.path_studio.moviecatalogue.ui.MainActivity
+import com.path_studio.moviecatalogue.ui.mainPage.MainActivity
 import com.path_studio.moviecatalogue.ui.bottomSheet.OnBottomSheetCallbacks
 
 class TVShowFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {

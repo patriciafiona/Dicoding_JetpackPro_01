@@ -1,4 +1,4 @@
-package com.path_studio.moviecatalogue.ui
+package com.path_studio.moviecatalogue.ui.mainPage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
