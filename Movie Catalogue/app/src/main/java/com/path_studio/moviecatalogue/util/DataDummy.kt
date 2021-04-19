@@ -2,7 +2,7 @@ package com.path_studio.moviecatalogue.util
 
 import com.path_studio.moviecatalogue.data.MovieEntity
 import com.path_studio.moviecatalogue.data.TvShowEntity
-import com.path_studio.moviecatalogue.data.TvShowSessionEntity
+import com.path_studio.moviecatalogue.data.TvShowSeasonEntity
 
 object DataDummy {
     fun generateDummyMovie(): List<MovieEntity> {
@@ -226,7 +226,7 @@ object DataDummy {
                         79.0,
                         50,
                         arrayListOf(
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         88396,
                                         1,
                                         "March 19, 2021",
@@ -251,7 +251,7 @@ object DataDummy {
                         86.0,
                         43,
                         arrayListOf(
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         71712,
                                         1,
                                         "September 25, 2017",
@@ -259,7 +259,7 @@ object DataDummy {
                                         "-",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/hiNyjUSTFrbMv3Sc0CxNW2o39az.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         71712,
                                         2,
                                         "September 24, 2018",
@@ -269,7 +269,7 @@ object DataDummy {
                                                 "Hospital’s surgical unit that his extraordinary medical gifts will save lives.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/sIq4SFloM0JSeRNAQVqb5g5zAng.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         71712,
                                         3,
                                         "September 23, 2019",
@@ -279,10 +279,10 @@ object DataDummy {
                                                 "ever has before.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/8QFssOwaWZ3eB60cGwDpfrZBscv.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         71712,
                                         4,
-                                        "November 2, 2020",
+                                        "November 02, 2020",
                                         15,
                                         "Dr. Shaun Murphy continues to use his extraordinary medical gifts at St. Bonaventure Hospital’s surgical unit. " +
                                                 "As his romantic relationship with Lea deepens, he will also face new responsibilities as a fourth-year resident when he " +
@@ -314,10 +314,10 @@ object DataDummy {
                         77.0,
                         44,
                         arrayListOf(
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         60735,
                                         1,
-                                        "October 7, 2014",
+                                        "October 07, 2014",
                                         23,
                                         "When an unexpected accident at the S.T.A.R. Labs Particle Accelerator facility strikes Barry, " +
                                                 "he finds himself suddenly charged with the incredible power to move at super speeds. While Barry has " +
@@ -327,20 +327,20 @@ object DataDummy {
                                                 "— is finally moving forward in life … very, very fast!",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/A3H6pewHfoy2bXmNhvycOe0xzlC.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         60735,
                                         2,
-                                        "October 6, 2015",
+                                        "October 06, 2015",
                                         23,
                                         "Following the dramatic events of season 1, Team Flash quickly turns their attention to a threat high above " +
                                                 "Central City. Armed with the heart of a hero and the ability to move at super speeds, will Barry be able to save his " +
                                                 "city from impending doom?",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/8xWZPVX1cv9V5YD1RPeLj9QZDE9.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         60735,
                                         3,
-                                        "October 4, 2016",
+                                        "October 04, 2016",
                                         23,
                                         "Forensic scientist Barry Allen, aka The Flash, is living his dream life. His parents are alive. He's dating beautiful, " +
                                                 "smart Iris West. And he's able to stand back and let the new speedster in town, Kid Flash, step in to protect Central City. " +
@@ -350,7 +350,7 @@ object DataDummy {
                                                 "crisis, he and the S.T.A.R. Labs team fight off lethal threats from the God of Speed, Savitar.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/rN1hgV8Ag3bZmkv33Udm93hIxQp.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         60735,
                                         4,
                                         "October 10, 2017",
@@ -363,10 +363,10 @@ object DataDummy {
                                                 "Barry runs.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/zBF3wcUp3SgnlYNOXQeaDg5XfTu.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         60735,
                                         5,
-                                        "October 9, 2018",
+                                        "October 09, 2018",
                                         22,
                                         "Barry Allen and his new wife, Iris West, finally settling into married life when they're visited by Nora West-Allen, their " +
                                                 "speedster daughter from the future. Nora's arrival brings to light the legacy every member of Team Flash will leave years from now, " +
@@ -375,20 +375,20 @@ object DataDummy {
                                                 "relentless villain they have ever faced: Cicada!",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/z3CqL2vnjgLuefOiR5AYD9Tf91S.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         60735,
                                         6,
-                                        "October 8, 2019",
+                                        "October 08, 2019",
                                         19,
                                         "When Barry and Iris deal with loss of their daughter, the team faces their greatest threat yet - one that threatens to destroy all " +
                                                 "of Central City; Killer Frost has a brush with death that will change her relationship with Caitlin. Faced with the news of his impending " +
                                                 "death, Barry's resiliency suffers as he struggles to fight fate.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/qDntRDRs5XohN4ClcV2SH9WlzpI.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         60735,
                                         7,
-                                        "March 2, 2021",
+                                        "March 02, 2021",
                                         9,
                                         "After a thrilling cliffhanger last season which saw Mirror Monarch victorious and still-at-large in Central City, The Flash must regroup in " +
                                                 "order to stop her and find a way to make contact with his missing wife, Iris West-Allen. With help from the rest of Team Flash, Barry will ultimately " +
@@ -415,7 +415,7 @@ object DataDummy {
                         85.0,
                         45,
                         arrayListOf(
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         63174,
                                         1,
                                         "January 25, 2016",
@@ -424,7 +424,7 @@ object DataDummy {
                                                 "nightclub and forms a connection with a homicide detective.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/9qvNXKYqZEsYn3g3yn5tXQe0ceB.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         63174,
                                         2,
                                         "September 19, 2016",
@@ -432,25 +432,25 @@ object DataDummy {
                                         "Lucifer returns for another season, but his devil-may-care attitude may soon need an adjustment: His mother is coming to town.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/fTQzbse8HKh0z6UJbMUumdbZ8PX.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         63174,
                                         3,
-                                        "October 2, 2017",
+                                        "October 02, 2017",
                                         26,
                                         "As Lucifer struggles with an identity crisis, a gruff new police lieutenant shakes up the status quo with Chloe and the rest " +
                                                 "of the LAPD.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/4mKbrTqGg1daz3pDUgqd9ZSdZRt.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         63174,
                                         4,
-                                        "May 8, 2019",
+                                        "May 08, 2019",
                                         10,
                                         "As Chloe struggles to come to terms with Lucifer's disturbing revelation, a rogue priest sets out to stop a " +
                                                 "long-rumored prophecy.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/k9sLJE5geAmOCXOCbKnhSNND60J.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         63174,
                                         5,
                                         "August 20, 2020",
@@ -477,7 +477,7 @@ object DataDummy {
                         79.0,
                         40,
                         arrayListOf(
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         120168,
                                         1,
                                         "March 24, 2021",
@@ -485,7 +485,7 @@ object DataDummy {
                                         "-",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/o7uk5ChRt3quPIv8PcvPfzyXdMw.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         120168,
                                         2,
                                         "May 19, 2021",
@@ -512,7 +512,7 @@ object DataDummy {
                         83.0,
                         64,
                         arrayListOf(
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         95057,
                                         1,
                                         "February 23, 2021",
@@ -536,7 +536,7 @@ object DataDummy {
                         84.0,
                         36,
                         arrayListOf(
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         85271,
                                         1,
                                         "January 15, 2021",
@@ -562,15 +562,15 @@ object DataDummy {
                         81.0,
                         42,
                         arrayListOf(
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         71694,
                                         1,
-                                        "July 5, 2017",
+                                        "July 05, 2017",
                                         10,
                                         "-",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/xeSNi6T65ODCUDWOLnI1OJ6RPDp.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         71694,
                                         2,
                                         "July 19, 2018",
@@ -579,7 +579,7 @@ object DataDummy {
                                                 "influence amid the Los Angeles crack cocaine epidemic.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/2urnaBtljmz6pMixQlYbuwfD6ak.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         71694,
                                         3,
                                         "July 10, 2019",
@@ -588,7 +588,7 @@ object DataDummy {
                                                 "continuing its path of destruction and changing the culture forever.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/pMhdaEXiQuHNnmXt6tJ8OEOdcDw.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         71694,
                                         4,
                                         "February 24, 2021",
@@ -614,7 +614,7 @@ object DataDummy {
                         84.0,
                         60,
                         arrayListOf(
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         1399,
                                         1,
                                         "April 17, 2011",
@@ -627,10 +627,10 @@ object DataDummy {
                                                 "Viserys; and the Great Wall--a massive barrier of ice where a forgotten danger is stirring.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/zwaj4egrhnXOBIit1tyb4Sbt3KP.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         1399,
                                         2,
-                                        "April 1, 2012",
+                                        "April 01, 2012",
                                         10,
                                         "The cold winds of winter are rising in Westeros...war is coming...and five kings continue their savage quest for control " +
                                                 "of the all-powerful Iron Throne. With winter fast approaching, the coveted Iron Throne is occupied by the cruel Joffrey, " +
@@ -639,7 +639,7 @@ object DataDummy {
                                                 "Night's Watch.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/5tuhCkqPOT20XPwwi9NhFnC1g9R.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         1399,
                                         3,
                                         "March 31, 2013",
@@ -651,16 +651,16 @@ object DataDummy {
                                                 "dragons--attempts to raise an army in her quest for the Iron Throne.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/7d3vRgbmnrRQ39Qmzd66bQyY7Is.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         1399,
                                         4,
-                                        "April 6, 2014",
+                                        "April 06, 2014",
                                         10,
                                         "The War of the Five Kings is drawing to a close, but new intrigues and plots are in motion, and the surviving " +
                                                 "factions must contend with enemies not only outside their ranks, but within.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/dniQ7zw3mbLJkd1U0gdFEh4b24O.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         1399,
                                         5,
                                         "April 12, 2015",
@@ -669,17 +669,17 @@ object DataDummy {
                                                 "Westeros is on the brink of collapse, and many are seizing what they can while the realm implodes, like a corpse making a feast for crows.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/527sR9hNDcgVDKNUE3QYra95vP5.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         1399,
                                         6,
-                                        "April 6, 2014",
+                                        "April 06, 2014",
                                         10,
                                         "Following the shocking developments at the conclusion of season five, survivors from all parts of Westeros and Essos " +
                                                 "regroup to press forward, inexorably, towards their uncertain individual fates. Familiar faces will forge new alliances to bolster " +
                                                 "their strategic chances at survival, while new characters will emerge to challenge the balance of power in the east, west, north and south.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/zvYrzLMfPIenxoq2jFY4eExbRv8.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         1399,
                                         7,
                                         "July 16, 2017",
@@ -687,7 +687,7 @@ object DataDummy {
                                         "The long winter is here. And with it comes a convergence of armies and attitudes that have been brewing for years.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/3dqzU3F3dZpAripEx9kRnijXbOj.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         1399,
                                         8,
                                         "April 14, 2019",
@@ -714,15 +714,15 @@ object DataDummy {
                         80.0,
                         44,
                         arrayListOf(
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         44217,
                                         1,
-                                        "March 3, 2013",
+                                        "March 03, 2013",
                                         9,
                                         "-",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/uYaskJzmBhBdvkitDTjlH6gj9Pt.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         44217,
                                         2,
                                         "February 27, 2014",
@@ -732,7 +732,7 @@ object DataDummy {
                                                 "him and his beloved son apart. Plots are hatched, scores are settled, blood is spilled…all under the watchful eyes of the gods.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/g2Pgu5Dae9P99yJs0xZQtEagA76.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         44217,
                                         3,
                                         "February 19, 2015",
@@ -742,16 +742,16 @@ object DataDummy {
                                                 "searching for something more … and he finds it in the mythical city of Paris.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/jICv5UxLDvUqCp1D2jAb0PSJWAw.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         44217,
                                         4,
-                                        "April 6, 2014",
+                                        "April 06, 2014",
                                         20,
                                         "A ferocious battle between the Vikings and the French eventually comes down to Ragnar against Rollo. The outcome will " +
                                                 "seal the fate of the two brothers.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/nHJHNRApy8vmTUvZx59l1f1GXzB.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         44217,
                                         5,
                                         "November 29, 2017",
@@ -762,10 +762,10 @@ object DataDummy {
                                                 "himself to the will of the Gods. This season is full of startling alliances and unbelievable betrayals as the Vikings fight to rule the world.",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/aFfwMjFhb05O2mC5hCfoEPPJ8xL.jpg"
                                 ),
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         44217,
                                         6,
-                                        "December 4, 2019",
+                                        "December 04, 2019",
                                         20,
                                         "The final season finds Bjorn now the king of Kattegat, while Ivar is a fugitive in Russia and Lagertha plans a peaceful retirement " +
                                                 "to a country farm.",
@@ -789,10 +789,10 @@ object DataDummy {
                         77.0,
                         8,
                         arrayListOf(
-                                TvShowSessionEntity(
+                                TvShowSeasonEntity(
                                         114695,
                                         1,
-                                        "January 8, 2021",
+                                        "January 08, 2021",
                                         6,
                                         "-",
                                         "https://www.themoviedb.org/t/p/w260_and_h390_bestv2/EpDuYIK81YtCUT3gH2JDpyj8Qk.jpg"

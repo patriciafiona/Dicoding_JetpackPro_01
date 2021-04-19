@@ -9,6 +9,7 @@ import android.view.View
 import android.webkit.*
 import android.widget.Button
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
@@ -16,6 +17,8 @@ import com.faltenreich.skeletonlayout.Skeleton
 import com.path_studio.moviecatalogue.R
 import com.path_studio.moviecatalogue.data.TvShowEntity
 import com.path_studio.moviecatalogue.databinding.ActivityDetailTvShowBinding
+import com.path_studio.moviecatalogue.ui.movie.MovieAdapter
+import com.path_studio.moviecatalogue.ui.movie.MovieViewModel
 import com.path_studio.moviecatalogue.util.Utils
 
 class DetailTvShowActivity : AppCompatActivity() {
@@ -39,6 +42,7 @@ class DetailTvShowActivity : AppCompatActivity() {
         showLoading(true)
         showYoutubeLoading(true)
 
+        //prepare view model for show Tv Show Details
         val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailTvShowViewModel::class.java]
 
         val extras = intent.extras
@@ -48,6 +52,18 @@ class DetailTvShowActivity : AppCompatActivity() {
             if (showId != 0L) {
                 viewModel.setSelectedShow(showId)
                 val showDetails = viewModel.getShows()
+
+                val listOfSeason = showDetails.seasonDetails
+                val seasonAdapter = SeasonDetailAdapter()
+                seasonAdapter.setSeason(listOfSeason)
+
+                with(binding.rvSeasonDetail) {
+                    layoutManager = LinearLayoutManager(context)
+                    setHasFixedSize(true)
+                    adapter = seasonAdapter
+                    showLoading(false)
+                }
+
                 showDetailShow(showDetails)
             }
         }
@@ -66,7 +82,7 @@ class DetailTvShowActivity : AppCompatActivity() {
             binding.showTitle.text = tvShowEntity.title
             binding.showSinopsis.text = tvShowEntity.overview
 
-            binding.showReleaseDate.text = tvShowEntity.sessionDetails[tvShowEntity.sessionDetails.size - 1].sessionPremiere
+            binding.showReleaseDate.text = tvShowEntity.seasonDetails[tvShowEntity.seasonDetails.size - 1].sessionPremiere
 
             binding.showRating.rating = tvShowEntity.rating.toFloat()/20
 

@@ -25,8 +25,11 @@ class DetailMovieActivity : AppCompatActivity(){
     private lateinit var binding: ActivityDetailMovieBinding
     private lateinit var skeleton: Skeleton
 
+    private lateinit var movieDetails: MovieEntity
+
     companion object {
         const val EXTRA_MOVIE = "extra_movie"
+        const val EXTRA_STATE = "EXTRA_STATE"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +51,7 @@ class DetailMovieActivity : AppCompatActivity(){
             val movieId = extras.getLong(EXTRA_MOVIE)
             if (movieId != 0L) {
                 viewModel.setSelectedMovie(movieId)
-                val movieDetails = viewModel.getMovies()
+                movieDetails = viewModel.getMovies()
                 showDetailMovie(movieDetails)
             }
         }
@@ -56,6 +59,11 @@ class DetailMovieActivity : AppCompatActivity(){
         binding.btnBackPage.setOnClickListener {
             super.onBackPressed() // or super.finish();
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putParcelable(EXTRA_STATE, movieDetails)
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")

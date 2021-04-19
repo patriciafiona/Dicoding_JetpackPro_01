@@ -7,13 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.path_studio.moviecatalogue.R
-import com.path_studio.moviecatalogue.data.MovieEntity
 import com.path_studio.moviecatalogue.data.TvShowEntity
 import com.path_studio.moviecatalogue.databinding.ItemsMovieTvshowBinding
-import com.path_studio.moviecatalogue.ui.detailMovie.DetailMovieActivity
 import com.path_studio.moviecatalogue.ui.detailTvShow.DetailTvShowActivity
-import com.path_studio.moviecatalogue.ui.movie.MovieAdapter
-import com.path_studio.moviecatalogue.util.Utils
 
 class TvShowAdapter: RecyclerView.Adapter<TvShowAdapter.TvShowViewHolder>() {
 
@@ -43,7 +39,7 @@ class TvShowAdapter: RecyclerView.Adapter<TvShowAdapter.TvShowViewHolder>() {
             with(binding) {
                 tvItemTitle.text = show.title
 
-                tvItemDate.text = show.sessionDetails[show.sessionDetails.size -1].sessionPremiere
+                tvItemDate.text = show.seasonDetails[show.seasonDetails.size -1].sessionPremiere
 
                 tvItemRating.rating = show.rating.toFloat()/20
 

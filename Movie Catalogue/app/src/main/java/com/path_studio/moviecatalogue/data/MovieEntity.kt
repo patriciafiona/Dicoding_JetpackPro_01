@@ -1,5 +1,9 @@
 package com.path_studio.moviecatalogue.data
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class MovieEntity (
     var id: Long,
     var title: String,
@@ -11,4 +15,4 @@ data class MovieEntity (
     var backdropURL: String,
     var posterURL: String,
     var youtubeVideoURL: String
-)
+): Parcelable

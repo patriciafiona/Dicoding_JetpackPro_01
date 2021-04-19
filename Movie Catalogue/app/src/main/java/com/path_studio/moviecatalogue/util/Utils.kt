@@ -3,8 +3,9 @@ package com.path_studio.moviecatalogue.util
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
-import com.path_studio.moviecatalogue.R
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 object Utils {
@@ -33,7 +34,7 @@ object Utils {
         builder1.setCancelable(true)
 
         builder1.setPositiveButton(
-            "Oke"
+                "Oke"
         ) { dialog, _ -> dialog.cancel() }
 
         val alert11: AlertDialog = builder1.create()
@@ -50,6 +51,14 @@ object Utils {
             "$minute m"
         }
 
+    }
+
+    @SuppressLint("NewApi")
+    fun changeStringDateToYear(date: String): Int{
+        val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy")
+        val localDate: LocalDate = LocalDate.parse(date, formatter)
+
+        return localDate.year
     }
 
 }
