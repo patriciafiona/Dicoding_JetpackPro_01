@@ -25,4 +25,7 @@
     <string name="sinopsis">Sinopsis</string>
     <string name="temp_sinopsis">Sinopsis will show here...</string>
     <string name="trailer">Trailer</string>
+    <string name="season">Season</string>
+    <string name="tv_show_backdrop">Tv Show Backdrop</string>
+    <string name="tv_show_poster">Tv Show Poster</string>
 </resources>

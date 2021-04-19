@@ -40,4 +40,16 @@ object Utils {
         alert11.show()
     }
 
+    fun changeMinuteToDurationFormat(duration: Int): String{
+        val hour = duration/60
+        val minute = duration%60
+
+        return if (hour>0){
+            "$hour h $minute m"
+        }else{
+            "$minute m"
+        }
+
+    }
+
 }

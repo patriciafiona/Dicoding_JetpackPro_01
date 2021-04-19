@@ -28,6 +28,9 @@ class MovieFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
         _binding = FragmentMovieBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        //set loading
+        showLoading(true)
+
         //set bottomSheet Callbacks
         (activity as MainActivity).setOnBottomSheetCallbacks(this)
         return view
@@ -50,6 +53,7 @@ class MovieFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
                 layoutManager = LinearLayoutManager(context)
                 setHasFixedSize(true)
                 adapter = movieAdapter
+                showLoading(false)
             }
         }
 
@@ -77,6 +81,14 @@ class MovieFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
                 binding.textResult.text = this.getString(R.string.list_of_movies)
                 binding.indicatorImage.setImageResource(R.drawable.ic_baseline_expand_less_purple)
             }
+        }
+    }
+
+    private fun showLoading(state: Boolean) {
+        if (state) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
         }
     }
 

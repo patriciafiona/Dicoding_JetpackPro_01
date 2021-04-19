@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_700"
-    tools:context=".ui.detailMovie.DetailMovieActivity">
+    tools:context=".ui.detailTvShow.DetailTvShowActivity">
 
     <ImageView
-        android:id="@+id/movieBackdrop"
+        android:id="@+id/showBackdrop"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:adjustViewBounds="true"
@@ -18,7 +18,7 @@
         app:layout_constraintHeight_percent="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/movie_backdrop" />
+        android:contentDescription="@string/tv_show_backdrop" />
 
     <ImageButton
         android:id="@+id/btnBackPage"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/movieTopTitle"
+        android:id="@+id/showTopTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -48,7 +48,7 @@
         app:layout_constraintWidth_percent="0.8" />
 
     <ScrollView
-        android:id="@+id/detailMovieScrollView"
+        android:id="@+id/detailshowScrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/corner"
@@ -69,20 +69,20 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/moviePoster"
+                    android:id="@+id/showPoster"
                     android:layout_width="100dp"
                     android:layout_height="150dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
                     android:adjustViewBounds="true"
-                    android:contentDescription="@string/movie_poster"
+                    android:contentDescription="@string/tv_show_poster"
                     android:scaleType="centerCrop"
                     android:src="@color/amber"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/movieTitle"
+                    android:id="@+id/showTitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -91,12 +91,12 @@
                     android:text="@string/temp_title"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/moviePoster"
+                    app:layout_constraintStart_toEndOf="@+id/showPoster"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintWidth_percent="0.5" />
 
                 <ImageButton
-                    android:id="@+id/btnFavoriteMovie"
+                    android:id="@+id/btnFavoriteshow"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_centerHorizontal="true"
@@ -112,15 +112,15 @@
                     app:layout_constraintEnd_toEndOf="parent" />
 
                 <TextView
-                    android:id="@+id/movieReleaseDate"
+                    android:id="@+id/showReleaseDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="4dp"
                     android:maxLines="1"
                     android:text="@string/temp_date"
-                    app:layout_constraintStart_toEndOf="@+id/moviePoster"
-                    app:layout_constraintTop_toBottomOf="@+id/movieTitle" />
+                    app:layout_constraintStart_toEndOf="@+id/showPoster"
+                    app:layout_constraintTop_toBottomOf="@+id/showTitle" />
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -130,11 +130,11 @@
                     android:layout_marginTop="8dp"
                     android:contentDescription="@string/icon_dot"
                     android:src="@drawable/ic_baseline_dot_grey"
-                    app:layout_constraintStart_toEndOf="@+id/movieReleaseDate"
-                    app:layout_constraintTop_toBottomOf="@+id/movieTitle" />
+                    app:layout_constraintStart_toEndOf="@+id/showReleaseDate"
+                    app:layout_constraintTop_toBottomOf="@+id/showTitle" />
 
                 <TextView
-                    android:id="@+id/movieDuration"
+                    android:id="@+id/showDuration"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -142,10 +142,10 @@
                     android:maxLines="1"
                     android:text="@string/temp_duration"
                     app:layout_constraintStart_toEndOf="@+id/imageView4"
-                    app:layout_constraintTop_toBottomOf="@+id/movieTitle" />
+                    app:layout_constraintTop_toBottomOf="@+id/showTitle" />
 
                 <androidx.appcompat.widget.AppCompatRatingBar
-                    android:id="@+id/movieRating"
+                    android:id="@+id/showRating"
                     style="?android:attr/ratingBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -153,8 +153,8 @@
                     android:layout_marginTop="4dp"
                     android:max="5"
                     android:theme="@style/RatingBar"
-                    app:layout_constraintStart_toEndOf="@+id/moviePoster"
-                    app:layout_constraintTop_toBottomOf="@+id/movieReleaseDate" />
+                    app:layout_constraintStart_toEndOf="@+id/showPoster"
+                    app:layout_constraintTop_toBottomOf="@+id/showReleaseDate" />
 
                 <ImageView
                     android:id="@+id/titleBar01"
@@ -165,7 +165,7 @@
                     android:contentDescription="@string/titlebar"
                     android:src="@color/purple_700"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/moviePoster" />
+                    app:layout_constraintTop_toBottomOf="@+id/showPoster" />
 
                 <TextView
                     android:id="@+id/title_01"
@@ -178,13 +178,14 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/titleBar01"
-                    app:layout_constraintTop_toBottomOf="@+id/moviePoster" />
+                    app:layout_constraintTop_toBottomOf="@+id/showPoster" />
 
                 <HorizontalScrollView
                     android:id="@+id/genresContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="24dp"
                     android:paddingVertical="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -192,7 +193,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/title_01">
 
                     <LinearLayout
-                        android:id="@+id/movieGenres"
+                        android:id="@+id/showGenres"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
@@ -225,7 +226,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/genresContainer" />
 
                 <TextView
-                    android:id="@+id/movieSinopsis"
+                    android:id="@+id/showSinopsis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -245,10 +246,47 @@
                     android:contentDescription="@string/titlebar"
                     android:src="@color/purple_700"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/movieSinopsis" />
+                    app:layout_constraintTop_toBottomOf="@+id/showSinopsis" />
 
                 <TextView
                     android:id="@+id/title_03"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/season"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/titleBar02"
+                    app:layout_constraintTop_toBottomOf="@+id/showSinopsis" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_seasonDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_03"
+                    tools:listitem="@layout/items_movie_tvshow" />
+
+                <ImageView
+                    android:id="@+id/titleBar04"
+                    android:layout_width="8dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/titlebar"
+                    android:src="@color/purple_700"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_seasonDetail" />
+
+                <TextView
+                    android:id="@+id/title_04"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -257,24 +295,25 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/titleBar02"
-                    app:layout_constraintTop_toBottomOf="@+id/movieSinopsis" />
+                    app:layout_constraintStart_toEndOf="@+id/titleBar04"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_seasonDetail" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/webViewContainer"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp"
                     android:layout_marginBottom="32dp"
-                    app:layout_constraintHeight_percent="0.3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.3"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/title_03">
+                    app:layout_constraintTop_toBottomOf="@+id/title_04">
 
                     <WebView
-                        android:id="@+id/movieTrailer"
+                        android:id="@+id/showTrailer"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:layout_constraintBottom_toBottomOf="parent"
