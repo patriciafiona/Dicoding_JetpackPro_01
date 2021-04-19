@@ -2,12 +2,12 @@ package com.path_studio.moviecatalogue.ui.detailTvShow
 
 import android.annotation.SuppressLint
 import android.app.ActionBar
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.webkit.*
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
@@ -17,8 +17,6 @@ import com.faltenreich.skeletonlayout.Skeleton
 import com.path_studio.moviecatalogue.R
 import com.path_studio.moviecatalogue.data.TvShowEntity
 import com.path_studio.moviecatalogue.databinding.ActivityDetailTvShowBinding
-import com.path_studio.moviecatalogue.ui.movie.MovieAdapter
-import com.path_studio.moviecatalogue.ui.movie.MovieViewModel
 import com.path_studio.moviecatalogue.util.Utils
 
 class DetailTvShowActivity : AppCompatActivity() {
@@ -68,7 +66,7 @@ class DetailTvShowActivity : AppCompatActivity() {
             }
         }
 
-        binding.btnBackPage.setOnClickListener {
+        binding.btnBackPage02.setOnClickListener {
             super.onBackPressed() // or super.finish();
         }
     }

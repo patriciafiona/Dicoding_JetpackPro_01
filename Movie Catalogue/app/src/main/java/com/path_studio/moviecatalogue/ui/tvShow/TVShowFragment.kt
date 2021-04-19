@@ -11,12 +11,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.path_studio.moviecatalogue.R
-import com.path_studio.moviecatalogue.databinding.FragmentMovieBinding
 import com.path_studio.moviecatalogue.databinding.FragmentTvShowBinding
-import com.path_studio.moviecatalogue.ui.mainPage.MainActivity
 import com.path_studio.moviecatalogue.ui.bottomSheet.OnBottomSheetCallbacks
-import com.path_studio.moviecatalogue.ui.movie.MovieAdapter
-import com.path_studio.moviecatalogue.ui.movie.MovieViewModel
+import com.path_studio.moviecatalogue.ui.mainPage.MainActivity
 
 class TVShowFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
 
@@ -40,7 +37,7 @@ class TVShowFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
 
         //init
         textResult = view.findViewById(R.id.textResult2)
-        filterImage = view.findViewById(R.id.filterImage2)
+        filterImage = view.findViewById(R.id.indicatorImage2)
 
         //set loading
         showLoading(true)

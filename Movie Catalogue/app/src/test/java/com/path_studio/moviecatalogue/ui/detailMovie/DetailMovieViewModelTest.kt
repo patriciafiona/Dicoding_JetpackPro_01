@@ -1,10 +1,10 @@
 package com.path_studio.moviecatalogue.ui.detailMovie
 
 import com.path_studio.moviecatalogue.util.DataDummy
-import org.junit.Test
-
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Before
+import org.junit.Test
 
 class DetailMovieViewModelTest {
 
@@ -21,7 +21,9 @@ class DetailMovieViewModelTest {
     fun getMovies() {
         viewModel.setSelectedMovie(movieId)
         val movieEntity = viewModel.getMovies()
+
         assertNotNull(movieEntity)
+
         assertEquals(dummyMovie.id, movieEntity.id)
         assertEquals(dummyMovie.title, movieEntity.title)
         assertEquals(dummyMovie.description, movieEntity.description)

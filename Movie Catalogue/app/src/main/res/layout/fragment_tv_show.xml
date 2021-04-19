@@ -32,7 +32,7 @@
             android:textSize="20sp" />
 
         <ImageButton
-            android:id="@+id/filterImage2"
+            android:id="@+id/indicatorImage2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
