@@ -8,7 +8,7 @@
 
 <br/>
 
-Result of Renew my Dicoding: "Belajar Android Jetpack Pro" Certificate (Submission 01: Architecture Component)
+Result of my Dicoding: "Belajar Android Jetpack Pro" Certificate (Submission 01: Architecture Component)
 
 ## Information
 <p align="center">
